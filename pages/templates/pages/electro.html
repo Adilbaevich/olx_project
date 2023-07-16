@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Электроника
+{% endblock %}
+
+{% block content %}
+<div class="electro products">
+     {% for product2 in products2 %}
+     <div>
+        <h2>{{ product2.title }}</h2>
+        <a href="{% url 'electro_detail' product2.pk %}">
+          <img src="{{ product2.image.url }}" alt="">
+        </a>
+
+
+        </div>
+     {% endfor %}
+</div>
+{% endblock %}

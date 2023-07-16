@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Электроника
+{% endblock %}
+
+{% block content %}
+<div>
+  <div class="electro products">
+       <div class="product">
+          <h2 class="title1">{{ product2.title }}</h2>
+          <img src="{{ product2.image.url }}" alt="">
+          <p class="description">{{ product2.description }}</p>
+          <p>{{ products2.date }}</p>
+          <p class="price">{{ product2.price }}$</p>
+          </div>
+  </div>
+</div>
+{% endblock %}

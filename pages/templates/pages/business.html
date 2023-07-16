@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Бизнес и услуга
+{% endblock %}
+
+{% block content %}
+<div class="business products">
+      {% for product1 in products1 %}
+      <div>
+         <h2>{{ product1.title }}</h2>
+         <a href="{% url 'business_detail' product1.pk %}">
+          <img src="{{ product1.image.url }}" alt="">
+        </a>
+      </div>
+      {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Транспорт
+{% endblock %}
+
+{% block content %}  
+
+<div class="transport products">
+      {% for product in products %}
+      <div>
+         <h2>{{ product.title }}</h2>
+         <a href="{% url 'transport_detail' product.pk %}">
+          <img src="{{ product.image.url }}" alt="">
+         </a>
+
+      </div>
+      {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Для дома и сада
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="furanture products">
+        <div class="product">
+            <h2 class="'title1">{{ product4.title }}</h2>
+            <img src="{{ product4.image.url }}" alt="">
+            <p class="description">{{ product4.description }}</p>
+            <p>{{ products4.date }}</p>
+            <p class="price" > Цена: {{ product4.price }}$</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

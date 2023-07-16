@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Животные
+{% endblock %}
+
+{% block content %}
+
+<div class="animal products">
+  {% for product3 in products3 %}
+  <div>
+     <h2>{{ product3.title }}</h2>
+     <a href="{% url 'animal_detail' product3.pk %}">
+      <img src="{{ product3.image.url }}" alt="">
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

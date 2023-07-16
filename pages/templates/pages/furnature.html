@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Для дома и сада
+{% endblock %}
+
+{% block content %}
+<div class="furanture products">
+      {% for product4 in products4 %}
+      <div>
+        <h2>{{ product4.title }}</h2>
+        <a href="{% url 'furnature_detail' product4.pk %}">
+          <img src="{{ product4.image.url }}" alt="">
+        </a>
+     </div>
+      {% endfor %}
+</div>
+{% endblock %}

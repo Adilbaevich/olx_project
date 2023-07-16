@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  Животные
+{% endblock %}
+
+{% block content %}
+<div>
+  <div class="animal products">
+    <div class="product">
+       <h2 class="title1">{{ product3.title }}</h2>
+       <img src="{{ product3.image.url }}" alt="">
+       <p class="description">{{ product3.description }}</p>
+       <p>{{ products3.date }}</p>
+       <p class="price">Цена: {{ product3.price }} $</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
